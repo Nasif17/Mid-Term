@@ -101,8 +101,8 @@ int main()
     p5.player_name ="konok";
     p5.team_name ="white";
 
-    p5.player_name ="iron man";
-    p5.team_name ="gold";
+    p6.player_name ="iron man";
+    p6.team_name ="gold";
 
     Player prr[5];
     prr[0]=p1;
