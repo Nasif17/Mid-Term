@@ -21,6 +21,8 @@ class MyStack{
         }
     }
 
+    
+
     bool isEmpty()
     {
         if (top==-1)
@@ -35,36 +37,45 @@ class MyStack{
         }
     }
 
+
+
     void push(string e)
     {
         if(!isFull())
         {
             for (int i = 0; i <e.length(); i++)
             {
-                if (top+1<MaxSize){
+                if (top+1<MaxSize)
+                
                 {
                     top++;
                     data [top]=e[i];
                 }
                 
+                   
+            
+            
             }
-            
-            
-        }
 
+        }
     }
-    }
+
+
     void pop()
     {
         
         
-          if (!isEmpty()){
+          if (!isEmpty())
+          {
             char removed_element = data[top];
             top--;
 
-        }
+          }
     
     }
+
+
+
     void showDetails()
     {
        for (int i = 0; i <= top; i++)
@@ -74,10 +85,14 @@ class MyStack{
        cout<<endl;
        
     }
-        void showReverseElement() 
-        {
+
+    
+    
+     void showReverseElement() 
+    {
         cout << "The reverse elements are: " << endl;
-        for (int i = top; i >= 0; i--) {
+        for (int i = top; i >= 0; i--) 
+        {
             cout << data[i];
         }
         cout << endl;
@@ -91,11 +106,23 @@ class MyStack{
 int main()
 {
     MyStack stk;
-    stk.push("Hello");
+    string s;
+
+    cout<<"put your String :";
+    cin>>s;
+    stk.push(s);
+
     cout<<"printing the element"<<endl;
 
     stk.showDetails();
     stk.showReverseElement();
+    stk.pop();
+    stk.pop();
+    stk.showDetails();
+    stk.push("Nasif");
+    stk.showDetails();
+    stk.isEmpty();
+    stk.isFull();
 
     return 0;
 
